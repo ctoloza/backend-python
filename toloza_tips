@@ -12,6 +12,20 @@ pip3 install flake8
 
 pip3 install pre-commit
 
+pip3 install sqlalchemy
+
+sudo snap install dbeaver-ce
+
+""" inside python "
+from src.infra.config import *
+from src.infra.entities import *
+db_conn = DBConnectionHandler()
+engine = db_conn.get_engine()
+engine
+Base.metadata.create_all(engine)
+""" now you can import the datbase from dbeaver"
+
+
 
 
 yaml

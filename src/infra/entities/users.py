@@ -6,7 +6,7 @@ from src.infra.config import Base
 class Users(Base):
     """Users Entity"""
 
-    __table_name__ = "users"
+    __tablename__ = "users"
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False)
